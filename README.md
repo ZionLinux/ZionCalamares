@@ -1,2 +1,5 @@
 # ZionCalamares
-The main Repository for the Zion custom Calamares build.
+
+Custom Calamares configuration for [Zion Linux](https://github.com/zionlinux/zionlinux).
+
+Branding and other miscellanious stuff found [here](https://gtihub.com/zionlinux/zionother).
