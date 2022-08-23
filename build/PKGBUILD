@@ -14,7 +14,7 @@ source+=("git+$url.git")
 sha256sums=('SKIP')
 
 prepare() {
-	cd zioncalamares/calamares
+	cd ~/zion/ZionCalamares/build/calamares
 	sed -i -e 's/"Install configuration files" OFF/"Install configuration files" ON/' CMakeLists.txt
 
 	# patches here
@@ -27,7 +27,7 @@ prepare() {
 }
 
 build() {
-	cd ${srcdir}/zioncalamares/calamares
+        cd ~/zion/ZionCalamares/build/calamares
 
 	mkdir -p build
 	cd build
@@ -45,7 +45,7 @@ build() {
 }
 
 package() {
-	cd ${srcdir}/zioncalamares/calamares/build
+	cd ~/zion/ZionCalamares/build/calamares/build
 	make DESTDIR="$pkgdir" install
 	install -Dm644 "../data/calamares.desktop" "$pkgdir/usr/share/applications/calamares.desktop"
 	install -Dm755 "../data/calamares_polkit" "$pkgdir/usr/bin/calamares_polkit"
